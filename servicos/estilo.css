@@ -1,6 +1,8 @@
 body{
     font-family: 'Times New Roman', Times, serif;
     font-size: 16px;
+    margin: 0;
+    padding: 0;
 }
 @font-face {
     font-family: "Billing Lottre";
@@ -13,17 +15,22 @@ body{
 .caixa-servico{
     width: 340px;
     height: auto;
-    border: 1px solid;
     text-align: center;
-    padding-bottom: 10px;
+    padding-bottom: 30px;
     margin: 10px;
+    background-color: #f8f6f6;
+    position: relative;
+    top: 50px;
+    margin-bottom: 120px;
+    transition: 0.5s;
+    border-radius: 10px;
+    border: 1px solid black;
 }
 .caixa-servico:hover{
-    box-shadow: 10px 7px gray;
-    border: #DC0089;
+    box-shadow: 15px 15px 30px #FCB2F7,
+    -15px -15px 30px #FCB2F7;
     border-style:groove;
-    background-color: #C94086;
-    color: white;
+    color: black;
     transition: 0.5s;
 }
 .lista-servico{
@@ -46,15 +53,36 @@ body{
     font-size: 1.3em;
     font-style: italic;
 }
-.agendamento-botao{
-    background-color: #FCB2F7;
+.agendamento-botao {
+    background: linear-gradient(90deg, #fcb2f7 60%, #ffacf3 100%);
+    color: #fff;
     text-align: center;
-    width: 50%;
-    border-radius: 10px;
-    height: 30px;
+    min-width: 120px;
+    width: 70%;
+    border-radius: 20px;
+    height: 38px;
+    border: none;
+    outline: none;
+    font-weight: bold;
+    font-size: 1.1em;
+    margin: 16px auto 0 auto;
+    box-shadow: 0 2px 8px rgba(252,178,247,0.15);
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 24px;
 }
-.agendamento-botao:hover{
-    background-color: #DC0089;
-    color: aliceblue;
-    font-style:italic;
+.agendamento-botao:hover {
+    background: linear-gradient(90deg, #ff84f7 60%, #fcb2f7 100%);
+    color: #fff;
+    transform: scale(1.05);
+}
+
+#servico{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: white;
 }
